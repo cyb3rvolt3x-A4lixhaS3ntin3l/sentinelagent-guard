@@ -69,6 +69,8 @@ That's it. Every detection check runs locally, in your process. Nothing is sent 
 | [`@sentinelreign/guard`](https://www.npmjs.com/package/@sentinelreign/guard) | Embeddable SDK (`Guard`, `wrap()`, Express middleware) | Protect your own MCP server, in-process |
 | [`@sentinelreign/guard-proxy`](https://www.npmjs.com/package/@sentinelreign/guard-proxy) | stdio sidecar + the free `scan` CLI | Protect Cursor / Claude Code / any stdio server |
 
+📖 **[Full usage guide →](docs/USAGE.md)**  ·  🛡️ **[All 22 detection checks →](docs/CHECKS.md)**  ·  💡 **[Examples →](examples/)**
+
 ## What's detected
 
 **22 checks across 5 layers**, all deterministic, all running in microseconds:
@@ -89,12 +91,38 @@ When a **team** outgrows self-hosting — a dashboard across many servers, centr
 
 The SDK's optional `licenseKey` connects an instance to that hosted control plane. It unlocks the *managed layer* — never the detection. Detection is always free.
 
-## Docs & links
+## The SentinelReign ecosystem
 
-- 🌐 Product & pricing: **[guard.sentinelreign.com](https://guard.sentinelreign.com)**
-- 🔬 Free MCP scanner & research: **[andraxpentester.in](https://andraxpentester.in)**
+Security for the agentic era, built end to end — research feeds the products.
+
+| | | |
+| --- | --- | --- |
+| 🛡️ **SentinelAgent Guard** | The firewall (this repo) + the hosted SaaS | **[guard.sentinelreign.com](https://guard.sentinelreign.com)** |
+| 🔬 **Andrax Pentester** | The research lab & **free MCP scanner** — 5,311 servers graded, 61 disclosures, 24 labs, 50 tools | **[andraxpentester.in](https://andraxpentester.in)** |
+| 👑 **SentinelReign** | The parent company & roadmap | **[sentinelreign.com](https://sentinelreign.com)** |
+
+Threats are found in the open at the lab, hardened into the `mcpgrade` rubric
+everyone can read, then shipped as the products in this ecosystem.
+
+## About the author
+
+**Syed Zada Abrar** — security researcher, founder, and author, from Kashmir,
+India. He runs the lab where the threats are found, wrote the rubric they're
+graded against, and builds the products that enforce it. Off the terminal, he
+also writes fiction.
+
+- 🌐 [sentinelreign.com](https://sentinelreign.com) · 🔬 [andraxpentester.in](https://andraxpentester.in)
+- 📖 Novel — *[Even If She Never Returned](https://notionpress.com/in/read/even-if-she-never-returned)*
+- 💻 [GitHub](https://github.com/cyb3rvolt3x-A4lixhaS3ntin3l) · 📸 [Instagram @the_syedabrar](https://instagram.com/the_syedabrar)
+
+If SentinelAgent Guard is useful to you, a ⭐ on this repo genuinely helps it
+reach the developers who need it.
+
+## Contributing & security
+
+- 🤝 [Contributing guide](./CONTRIBUTING.md) — build, test, and PR in minutes.
+- 🔐 [Security policy](./SECURITY.md) — report vulnerabilities to security@sentinelreign.com.
 - 📦 npm: [`guard-core`](https://www.npmjs.com/package/@sentinelreign/guard-core) · [`guard`](https://www.npmjs.com/package/@sentinelreign/guard) · [`guard-proxy`](https://www.npmjs.com/package/@sentinelreign/guard-proxy)
-- 🐛 [Report a security issue](./SECURITY.md) · [Contributing](./CONTRIBUTING.md)
 
 ## License
 
