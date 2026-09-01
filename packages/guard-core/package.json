@@ -1,0 +1,57 @@
+{
+  "name": "@sentinelreign/guard-core",
+  "version": "2.0.1",
+  "description": "Deterministic, zero-dependency MCP security detection engine. Protocol conformance, tool-definition pinning, call-time policy and egress DLP.",
+  "license": "Apache-2.0",
+  "author": "Syed Zada Abrar",
+  "homepage": "https://guard.sentinelreign.com",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./corpus": {
+      "types": "./dist/corpus/index.d.ts",
+      "default": "./dist/corpus/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "security",
+    "firewall",
+    "prompt-injection",
+    "tool-poisoning",
+    "rug-pull",
+    "dlp"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "benchmark": "tsx src/benchmark.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyb3rvolt3x-A4lixhaS3ntin3l/sentinelagent-guard.git",
+    "directory": "packages/guard-core"
+  },
+  "bugs": {
+    "url": "https://github.com/cyb3rvolt3x-A4lixhaS3ntin3l/sentinelagent-guard/issues"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "@sentinelreign/guard",
+  "version": "0.1.1",
+  "description": "Embedded MCP security firewall. Deterministic detection in your own process — no agent traffic leaves your network.",
+  "license": "Apache-2.0",
+  "author": "Syed Zada Abrar",
+  "homepage": "https://guard.sentinelreign.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyb3rvolt3x-A4lixhaS3ntin3l/sentinelagent-guard.git",
+    "directory": "packages/guard-sdk"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "security",
+    "firewall",
+    "sdk",
+    "tool-poisoning",
+    "rug-pull",
+    "dlp"
+  ],
+  "dependencies": {
+    "@guard/core": "file:../guard-core"
+  },
+  "scripts": {
+    "prebuild": "node scripts/link-core.mjs",
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/cyb3rvolt3x-A4lixhaS3ntin3l/sentinelagent-guard/issues"
+  }
+}

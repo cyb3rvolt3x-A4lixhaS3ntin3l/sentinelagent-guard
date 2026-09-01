@@ -1,0 +1,58 @@
+{
+  "name": "@sentinelreign/guard-proxy",
+  "version": "0.1.1",
+  "description": "Stdio sidecar firewall for MCP servers, plus the free mcpgrade scanner. Sits between an IDE and the server it auto-executes.",
+  "license": "Apache-2.0",
+  "author": "Syed Zada Abrar",
+  "homepage": "https://guard.sentinelreign.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyb3rvolt3x-A4lixhaS3ntin3l/sentinelagent-guard.git",
+    "directory": "packages/guard-proxy"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "guard-proxy": "./dist/cli.js",
+    "guard": "./dist/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "security",
+    "firewall",
+    "stdio",
+    "proxy",
+    "scanner",
+    "mcpgrade"
+  ],
+  "dependencies": {
+    "@guard/core": "file:../guard-core"
+  },
+  "scripts": {
+    "prebuild": "node scripts/link-core.mjs",
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/cyb3rvolt3x-A4lixhaS3ntin3l/sentinelagent-guard/issues"
+  }
+}

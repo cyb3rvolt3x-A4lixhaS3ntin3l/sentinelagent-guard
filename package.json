@@ -1,0 +1,33 @@
+{
+  "name": "sentinelagent-guard",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A protocol-native firewall for MCP servers and AI agents — open-source detection engine, embeddable SDK, and stdio CLI.",
+  "license": "Apache-2.0",
+  "author": "Syed Zada Abrar (SentinelReign)",
+  "homepage": "https://guard.sentinelreign.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyb3rvolt3x-A4lixhaS3ntin3l/sentinelagent-guard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cyb3rvolt3x-A4lixhaS3ntin3l/sentinelagent-guard/issues"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @sentinelreign/guard-core && npm run build -w @sentinelreign/guard && npm run build -w @sentinelreign/guard-proxy",
+    "test": "vitest run",
+    "typecheck": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "tsx": "^4.19.0",
+    "typescript": "^5",
+    "vitest": "^4.1.11"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
